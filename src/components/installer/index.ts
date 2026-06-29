@@ -7,3 +7,5 @@ export { default as LicenseActivation } from "./LicenseActivation";
 export { default as RequirementChecker } from "./RequirementChecker";
 export { default as RollbackManager } from "./RollbackManager";
 export { default as ThemeUploader } from "./ThemeUploader";
+export { default as BackupManager } from "./BackupManager";
+export { default as InstallerLogs } from "./InstallerLogs";
