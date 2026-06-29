@@ -13,7 +13,7 @@ interface Server {
 
 interface ServerContextType {
   servers: Server[];
-  setServers: (servers: Server[]) => void;
+  setServers: React.Dispatch<React.SetStateAction<Server[]>>;
 }
 
 const ServerContext = createContext<ServerContextType | undefined>(
@@ -35,8 +35,6 @@ export function ServerProvider({
       }}
     >
       {children}
-    >
-      {children}
     </ServerContext.Provider>
   );
 }
@@ -45,7 +43,9 @@ export function useServer() {
   const context = useContext(ServerContext);
 
   if (!context) {
-    throw new Error("useServer must be used inside ServerProvider");
+    throw new Error(
+      "useServer must be used inside ServerProvider"
+    );
   }
 
   return context;
