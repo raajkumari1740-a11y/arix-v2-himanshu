@@ -9,3 +9,5 @@ export { default as RollbackManager } from "./RollbackManager";
 export { default as ThemeUploader } from "./ThemeUploader";
 export { default as BackupManager } from "./BackupManager";
 export { default as InstallerLogs } from "./InstallerLogs";
+export { default as InstallSuccess } from "./InstallSuccess";
+export { default as InstallError } from "./InstallError";
